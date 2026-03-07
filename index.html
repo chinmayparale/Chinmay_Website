@@ -9,7 +9,19 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #000000; scroll-behavior: smooth; }
         .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, #ffffff, #6b7280); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #f3f4f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Subtle animations */
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .animate-fade-in-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="text-white antialiased">
@@ -19,7 +31,7 @@
             <span class="text-white font-semibold tracking-tight uppercase text-sm">Dr. Chinmay Parale</span>
             
             <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-blue-600">
+            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-blue-400">
                 <a href="#about" class="hover:text-blue-800 transition">About</a>
                 <a href="#education" class="hover:text-blue-800 transition">Education</a>
                 <a href="#work-experience" class="hover:text-blue-800 transition">Experience</a>
@@ -30,7 +42,7 @@
             </div>
             
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-blue-600 hover:text-blue-800 transition">
+            <button id="mobile-menu-button" class="md:hidden text-blue-400 hover:text-blue-800 transition">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -40,24 +52,24 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10">
             <div class="px-6 py-4 space-y-4">
-                <a href="#about" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">About</a>
-                <a href="#education" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">Education</a>
-                <a href="#work-experience" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">Experience</a>
-                <a href="#affiliations" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">Affiliations</a>
-                <a href="#research" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">Research</a>
-                <a href="#awards" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">Awards</a>
-                <a href="#contact" class="block text-white hover:text-blue-600 transition text-sm uppercase tracking-widest font-medium">Contact</a>
+                <a href="#about" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">About</a>
+                <a href="#education" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Education</a>
+                <a href="#work-experience" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Experience</a>
+                <a href="#affiliations" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Affiliations</a>
+                <a href="#research" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Research</a>
+                <a href="#awards" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Awards</a>
+                <a href="#contact" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header id="about" class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+    <header id="about" class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12 animate-fade-in-up">
         <div class="flex-1 order-2 md:order-1">
             <h1 class="text-4xl md:text-6xl font-bold text-white tracking-normal mb-4 text-gradient">
                 DR. CHINMAY PARALE 
-                <span class="text-blue-700 text-3xl block mt-2 font-light">MD, DM</span>
+                <span class="text-blue-400 text-3xl block mt-2 font-light">MD, DM</span>
             </h1>
-            <p class="text-2xl text-blue-600 font-bold max-w-xl leading-relaxed mb-8">
+            <p class="text-2xl text-blue-400 font-bold max-w-xl leading-relaxed mb-8">
                 Interventional Cardiologist & Electrophysiologist 
             </p>
         </div>
@@ -74,15 +86,19 @@
 
     <main class="max-w-5xl mx-auto px-6 space-y-32 pb-32">
         
-        <section id="about">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-blue-700 font-bold mb-10">About me</h2>
+        <section id="about" class="animate-fade-in-up delay-100">
+            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">About me</h2>
+            <p class="text-white text-lg leading-relaxed max-w-3xl mb-6">
+                After training in two premier government institutions in India and choosing Cardiology as my specialization, I chose to focus on and sub-specialize in cardiac electrophysiology and transcatheter valvular interventions. This was followed by a tenure as faculty at India's apex government medical institute - AIIMS, New Delhi. I now work in the private sector and my clinical practice centers on rhythm disorders (radiofrequency ablations, pacemaker and CRT/ICD implantations) and transcatheter valve therapies (TAVI/MitraClip). 
+            </p>
+       
             <p class="text-white text-lg leading-relaxed max-w-3xl">
-                After training in two premier government institutions in India and choosing Cardiology as my specialization, I chose to focus on and sub-specialize in cardiac electrophysiology and transcatheter valvular interventions. This was followed by a tenure as faculty at India's apex government medical institute - AIIMS, New Delhi. I now work in the private sector and my clinical practice centers on rhythm disorders (radiofrequency ablations, pacemaker and CRT/ICD implantations) and transcatheter valve therapies (TAVI/MitraClip). Beyond the catheterization lab, I spend time reading novels, playing amateur chess and fiddling with Artificial Intelligence tools to solve clinical and other day to day problems.
+                Beyond the catheterization lab, I spend time reading novels, playing amateur chess and fiddling with Artificial Intelligence tools to solve clinical and other day to day problems.
             </p>
         </section>
 
-        <section id="education">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-blue-700 font-bold mb-10">Education</h2>
+        <section id="education" class="animate-fade-in-up delay-200">
+            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Education</h2>
             <div class="space-y-8">
                 <div class="flex gap-4 items-start">
                     <div class="w-16 h-16 flex-shrink-0 bg-slate-200 rounded-lg flex items-center justify-center border border-white/10">
@@ -90,7 +106,7 @@
                     </div>
                     <div>
                         <p class="text-white font-bold text-lg mb-1">Doctor of Medicine (DM) - Cardiology</p>
-                        <p class="text-blue-600 uppercase text-[14px] tracking-widest">Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry</p>
+                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -99,7 +115,7 @@
                     </div>
                     <div>
                         <p class="text-white font-bold text-lg mb-1">Doctor of Medicine (MD) - Internal Medicine</p>
-                        <p class="text-blue-600 uppercase text-[14px] tracking-widest">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
+                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -108,14 +124,14 @@
                     </div>
                     <div>
                         <p class="text-white font-bold text-lg mb-1">Bachelor of Medicine and Bachelor of Surgery (MBBS)</p>
-                        <p class="text-blue-600 uppercase text-[14px] tracking-widest">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
+                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="work-experience">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-blue-700 font-bold mb-10">Work Experience</h2>
+        <section id="work-experience" class="animate-fade-in-up delay-300">
+            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Work Experience</h2>
             <div class="space-y-8">
                 <div class="flex gap-4 items-start">
                     <div class="w-16 h-16 flex-shrink-0 bg-slate-200 rounded-lg flex items-center justify-center border border-white/10">
@@ -123,7 +139,7 @@
                     </div>
                     <div>
                         <p class="text-white font-bold text-lg mb-1">Assistant Professor, Department of Cardiology</p>
-                        <p class="text-blue-600 uppercase text-[14px] tracking-widest">All India Institute of Medical Sciences (AIIMS), New Delhi</p>
+                        <p class="text-white-600 uppercase text-[15px] tracking-wider">All India Institute of Medical Sciences (AIIMS), New Delhi</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -132,7 +148,7 @@
                     </div>
                     <div>
                         <p class="text-white font-bold text-lg mb-1">Post-doctoral fellowship in Valvular Interventions</p>
-                        <p class="text-blue-600 uppercase text-[14px] tracking-widest">Aarhus University Hospital, Denmark</p>
+                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Aarhus University Hospital, Denmark</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -141,14 +157,14 @@
                     </div>
                     <div>
                         <p class="text-white font-bold text-lg mb-1">Post-doctoral fellowship in Cardiac Electrophysiology</p>
-                        <p class="text-blue-600 uppercase text-[14px] tracking-widest">Deenanath Mangeshkar Hospital, Pune</p>
+                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Deenanath Mangeshkar Hospital, Pune</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="affiliations">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-blue-700 font-bold mb-10">Current Affiliations</h2>
+        <section id="affiliations" class="animate-fade-in-up delay-400">
+            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Current Affiliations</h2>
             <div class="space-y-8">
                 <div class="flex gap-4 items-start">
                     <div class="w-16 h-16 flex-shrink-0 bg-slate-200 rounded-lg flex items-center justify-center border border-white/10">
@@ -177,114 +193,114 @@
             </div>
         </section>
 
-        <section id="research">
+        <section id="research" class="animate-fade-in-up delay-500">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-blue-700 font-bold">Selected Publications</h2>
-                <a href="https://scholar.google.com/citations?user=ELePHUsAAAAJ&hl=en" class="text-xs uppercase tracking-widest text-blue-600 hover:text-blue-800 border-b border-white/10 pb-1 transition">
+                <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold">Selected Publications</h2>
+                <a href="https://scholar.google.com/citations?user=ELePHUsAAAAJ&hl=en" class="text-s uppercase tracking-widest text-blue-400 hover:text-blue-800 border-b border-white/10 pb-1 transition">
                     Full List on Google Scholar →
                 </a>
             </div>
             
             <div class="space-y-8">
                 <div class="group">
-                    <p class="text-blue-700 text-[10px] uppercase tracking-widest mb-2 font-mono">Indian Pacing and Electrophysiology Journal</p>
+                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Indian Pacing and Electrophysiology Journal</p>
                     <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
                         Left Bundle Cardiac Resynchronization Therapy versus Left Bundle Optimized Cardiac Resynchronization Therapy
                     </h3>
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0972629226000513" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-600 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0972629226000513" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-blue-700 text-[10px] uppercase tracking-widest mb-2 font-mono">Journal of Practice of Cardiovascular Sciences</p>
+                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Journal of Practice of Cardiovascular Sciences</p>
                     <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
                         Harnessing Machine Learning for Predicting Atrial Fibrillation from Electrocardiogram Signals
                     </h3>
-                    <a href="https://journals.lww.com/jpcs/fulltext/2025/09000/harnessing_machine_learning_for_predicting_atrial.5.aspx?context=latestarticles" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-600 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://journals.lww.com/jpcs/fulltext/2025/09000/harnessing_machine_learning_for_predicting_atrial.5.aspx?context=latestarticles" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-blue-700 text-[10px] uppercase tracking-widest mb-2 font-mono">Pacing and Clinical ELectrophysiology (PACE)</p>
+                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Pacing and Clinical ELectrophysiology (PACE)</p>
                     <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
                         Comparison of electrocardiographic parameters between left bundle optimized cardiac resynchronization therapy (LOT-CRT) and left bundle branch pacing—cardiac resynchronization therapy (LBBP-CRT)
                     </h3>
-                    <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/pace.14793" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-600 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/pace.14793" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-blue-700 text-[10px] uppercase tracking-widest mb-2 font-mono">Indian Journal of Pediatrics</p>
+                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Indian Journal of Pediatrics</p>
                     <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
                         Audio vs. Video as a Pacifier for Pediatric Echocardiography- A Randomized Controlled Trial
                     </h3>
-                    <a href="https://link.springer.com/article/10.1007/s12098-023-04516-w" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-600 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://link.springer.com/article/10.1007/s12098-023-04516-w" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-blue-700 text-[10px] uppercase tracking-widest mb-2 font-mono">European Heart Journal</p>
+                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">European Heart Journal</p>
                     <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
                         Isolated posterior mitral leaflet elongation-related dynamic left ventricular outflow obstruction
                     </h3>
-                    <a href="https://academic.oup.com/eurheartj/article/43/28/2713/6604050?login=false" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-600 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://academic.oup.com/eurheartj/article/43/28/2713/6604050?login=false" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
                 </div>
             </div>
         </section>
 
-        <section id="awards">
-            <h2 class="text-xs uppercase tracking-[0.3em] text-blue-700 font-bold mb-10">Key Awards & Accomplishments</h2>
+        <section id="awards" class="animate-fade-in-up delay-100">
+            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Key Awards & Accomplishments</h2>
             <div class="space-y-6">
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                         <p class="text-white font-medium text-lg mb-1">AV Gandhi SCAI 'Excellence in Cardiology' Award</p>
-                        <p class="text-blue-600 text-sm">SCAI, 2024</p>
+                        <p class="text-blue-400 text-sm">Society of Cardiovascular Angiography and Interventions, 2024</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                         <p class="text-white font-medium text-lg mb-1">Torrent Young Scholar and Best Orator Award</p>
-                        <p class="text-blue-600 text-sm">Torrent Pharmaceuticals, 2023</p>
+                        <p class="text-blue-400 text-sm">Torrent Pharmaceuticals, 2023</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                         <p class="text-white font-medium text-lg mb-1">Indian Heart Journal Best Research Paper Award</p>
-                        <p class="text-blue-600 text-sm">Cardiology Society of India, 2023</p>
+                        <p class="text-blue-400 text-sm">Cardiology Society of India, 2023</p>
                     </div>
                 </div>
                  <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                         <p class="text-white font-medium text-lg mb-1">Malekar Prize and Habbu Gold Medal in Internal Medicine</p>
-                        <p class="text-blue-600 text-sm">Seth GSMC and KEMH, 2023</p>
+                        <p class="text-blue-400 text-sm">Seth GSMC and KEMH, 2023</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-700 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                         <p class="text-white font-medium text-lg mb-1">Academic Excellence Award</p>
-                        <p class="text-blue-600 text-sm">Maharashtra Association of Physicians, 2018</p>
+                        <p class="text-blue-400 text-sm">Maharashtra Association of Physicians, 2018</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="text-center pt-24 border-t border-white/10">
+        <section id="contact" class="text-center pt-24 border-t border-white/10 animate-fade-in-up delay-200">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tighter">Let's connect.</h2>
-            <p class="text-blue-600 mb-10 max-w-lg mx-auto leading-relaxed">
+            <p class="text-gray-600 mb-10 max-w-lg mx-auto leading-relaxed">
                 Open for clinical consultations and research collaborations
             </p>
             <div class="flex gap-6 justify-center mt-8">
-                <a href="https://www.linkedin.com/in/chinmay-parale-61b1541b9" target="_blank" class="text-blue-600 hover:text-blue-800 transition">
+                <a href="https://www.linkedin.com/in/chinmay-parale-61b1541b9" target="_blank" class="text-blue-400 hover:text-blue-800 transition">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
-                <a href="mailto:chinmayparale@gmail.com" class="text-blue-600 hover:text-blue-800 transition">
+                <a href="mailto:chinmayparale@gmail.com" class="text-blue-400 hover:text-blue-800 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </a>
-                <a href="https://twitter.com/chinmayparale" target="_blank" class="text-blue-600 hover:text-blue-800 transition">
+                <a href="https://twitter.com/chinmayparale" target="_blank" class="text-blue-400 hover:text-blue-800 transition">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
-                <a href="https://www.facebook.com/chinmayparale" target="_blank" class="text-blue-600 hover:text-blue-800 transition">
+                <a href="https://www.facebook.com/chinmayparale" target="_blank" class="text-blue-400 hover:text-blue-800 transition">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
             </div>
@@ -292,7 +308,7 @@
 
     </main>
 
-    <footer class="text-center py-12 text-[10px] uppercase tracking-[0.4em] text-blue-600 border-t border-white/10">
+    <footer class="text-center py-12 text-[10px] uppercase tracking-[0.4em] text-blue-400 border-t border-white/10">
         © 2026 DR. CHINMAY PARALE • PUNE, MAHARASHTRA, INDIA
     </footer>
 
@@ -311,6 +327,25 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+        
+        // Subtle scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections with animation
+        document.querySelectorAll('.animate-fade-in-up').forEach(section => {
+            observer.observe(section);
         });
     </script>
 
