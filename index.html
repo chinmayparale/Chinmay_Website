@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DR. CHINMAY PARALE | Interventional Cardiologist & Electrophysiologist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&family=DM+Sans:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000000; scroll-behavior: smooth; }
-        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, #ffffff, #f3f4f6); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #ffffff; color: #334155; scroll-behavior: smooth; }
+        h1 { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+        h2 { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+        .subtitle { font-family: 'Manrope', sans-serif; font-weight: 600; letter-spacing: 0.03em; }
         
-        /* Subtle animations */
+        .glass-card { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(63, 81, 181, 0.15); transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .glass-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(63, 81, 181, 0.1); }
+        .text-gradient { background: linear-gradient(to right, #3f51b5, #5c6bc0); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Smooth animations with cubic-bezier easing */
         .animate-fade-in-up {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         
         .animate-fade-in-up.animate {
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Staggered animation delays */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+        .delay-600 { transition-delay: 600ms; }
         
         /* Mobile menu transitions */
         .mobile-menu {
@@ -31,7 +46,7 @@
             right: 0;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 40;
         }
         
@@ -39,27 +54,140 @@
             opacity: 1;
             visibility: visible;
         }
+        
+        /* Enhanced button and link transitions */
+        button, a.nav-link {
+            transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        button:hover, a.nav-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Smooth scroll link transitions */
+        a:not(.nav-title) { scroll-behavior: smooth; }
+        
+        .nav-link-smooth {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        .nav-link-smooth::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3f51b5;
+            transition: width 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .nav-link-smooth:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link-smooth:active::after {
+            width: 100%;
+            background-color: #303f9f;
+        }
+        
+        .nav-link-smooth {
+            animation: clickPulse 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        @keyframes clickPulse {
+            0% {
+                color: #3f51b5;
+            }
+            50% {
+                color: #303f9f;
+            }
+            100% {
+                color: #3f51b5;
+            }
+        }
+        
+        /* Form Styling */
+        input, textarea {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1rem;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: #3f51b5;
+        }
+        
+        button[type="submit"] {
+            transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        button[type="submit"]:active {
+            transform: scale(0.98);
+        }
+        
+        .form-success {
+            background-color: #d1fae5;
+            border-color: #6ee7b7;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #065f46;
+            font-weight: 500;
+        }
+        
+        .form-error {
+            background-color: #fee2e2;
+            border-color: #fca5a5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: #7f1d1d;
+            font-weight: 500;
+        }
+        
+        a.nav-title { scroll-behavior: smooth; }
+        .nav-title {
+            transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .nav-title:hover {
+            transform: scale(1.02);
+            letter-spacing: 0.1em;
+        }
+        
+        #mobile-menu-button {
+            transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        #mobile-menu-button:hover {
+            transform: scale(1.1);
+        }
+        
+        #mobile-menu-button[aria-expanded="true"] {
+            color: #3f51b5;
+        }
     </style>
 </head>
-<body class="text-white antialiased">
+<body class="text-slate-700 antialiased">
 
-    <nav class="border-b border-white/10 sticky top-0 z-50 bg-black/80 backdrop-blur-md">
+    <nav class="border-b border-slate-200 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-white font-semibold tracking-tight uppercase text-sm">Dr. Chinmay Parale</span>
+            <a href="#" class="nav-title text-slate-700 font-semibold tracking-tight uppercase text-sm cursor-pointer">Dr. Chinmay Parale</a>
             
             <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-blue-400">
-                <a href="#about" class="hover:text-blue-800 transition">About</a>
-                <a href="#education" class="hover:text-blue-800 transition">Education</a>
-                <a href="#work-experience" class="hover:text-blue-800 transition">Experience</a>
-                <a href="#affiliations" class="hover:text-blue-800 transition">Affiliations</a>
-                <a href="#research" class="hover:text-blue-800 transition">Research</a>
-                <a href="#awards" class="hover:text-blue-800 transition">Awards</a>
-                <a href="#contact" class="hover:text-blue-800 transition">Contact</a>
+            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium" style="color: #3f51b5;">
+                <a href="#about" class="nav-link-smooth" style="color: #3f51b5;">About</a>
+                <a href="#education" class="nav-link-smooth" style="color: #3f51b5;">Education</a>
+                <a href="#work-experience" class="nav-link-smooth" style="color: #3f51b5;">Experience</a>
+                <a href="#affiliations" class="nav-link-smooth" style="color: #3f51b5;">Affiliations</a>
+                <a href="#research" class="nav-link-smooth" style="color: #3f51b5;">Research</a>
+                <a href="#awards" class="nav-link-smooth" style="color: #3f51b5;">Awards</a>
+                <a href="cases.html" target="_blank" class="nav-link-smooth" style="color: #3f51b5;">Cases</a>
+                <a href="#contact" class="nav-link-smooth" style="color: #3f51b5;">Contact</a>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-blue-400 hover:text-blue-800 transition">
+            <button id="mobile-menu-button" class="md:hidden" style="color: #3f51b5;" aria-expanded="false" aria-label="Toggle menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -67,26 +195,27 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-black border-t border-white/10">
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-slate-200">
             <div class="px-6 py-4 space-y-4">
-                <a href="#about" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">About</a>
-                <a href="#education" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Education</a>
-                <a href="#work-experience" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Experience</a>
-                <a href="#affiliations" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Affiliations</a>
-                <a href="#research" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Research</a>
-                <a href="#awards" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Awards</a>
-                <a href="#contact" class="block text-white hover:text-blue-400 transition text-sm uppercase tracking-widest font-medium">Contact</a>
+                <a href="#about" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">About</a>
+                <a href="#education" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Education</a>
+                <a href="#work-experience" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Experience</a>
+                <a href="#affiliations" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Affiliations</a>
+                <a href="#research" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Research</a>
+                <a href="#awards" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Awards</a>
+                <a href="cases.html" target="_blank" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Cases</a>
+                <a href="#contact" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Contact</a>
             </div>
         </div>
     </nav>
 
     <header id="about" class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12 animate-fade-in-up">
         <div class="flex-1 order-2 md:order-1">
-            <h1 class="text-4xl md:text-6xl font-bold text-white tracking-normal mb-4 text-gradient">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-700 tracking-normal mb-4 text-gradient">
                 DR. CHINMAY PARALE 
-                <span class="text-blue-400 text-3xl block mt-2 font-light">MD, DM</span>
+                <span class="text-3xl block mt-2 font-light" style="color: #3f51b5;">MD, DM</span>
             </h1>
-            <p class="text-2xl text-blue-400 font-bold max-w-xl leading-relaxed mb-8">
+            <p class="text-2xl font-bold max-w-xl leading-relaxed mb-8" style="color: #3f51b5;">
                 Interventional Cardiologist & Electrophysiologist 
             </p>
         </div>
@@ -104,26 +233,26 @@
     <main class="max-w-5xl mx-auto px-6 space-y-32 pb-32">
         
         <section id="about" class="animate-fade-in-up delay-100">
-            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">About me</h2>
-            <p class="text-white text-lg leading-relaxed max-w-3xl mb-6">
+            <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-10" style="color: #3f51b5;">About me</h2>
+            <p class="text-slate-700 text-lg leading-relaxed max-w-3xl mb-6">
                 After training in two premier government institutions in India and choosing Cardiology as my specialization, I chose to focus on and sub-specialize in cardiac electrophysiology and transcatheter valvular interventions. This was followed by a tenure as faculty at India's apex government medical institute - AIIMS, New Delhi. I now work in the private sector and my clinical practice centers on rhythm disorders (radiofrequency ablations, pacemaker and CRT/ICD implantations) and transcatheter valve therapies (TAVI/MitraClip). 
             </p>
        
-            <p class="text-white text-lg leading-relaxed max-w-3xl">
+            <p class="text-slate-700 text-lg leading-relaxed max-w-3xl">
                 Beyond the catheterization lab, I spend time reading novels, playing amateur chess and fiddling with Artificial Intelligence tools to solve clinical and other day to day problems.
             </p>
         </section>
 
         <section id="education" class="animate-fade-in-up delay-200">
-            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Education</h2>
+            <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-10" style="color: #3f51b5;">Education</h2>
             <div class="space-y-8">
                 <div class="flex gap-4 items-start">
                     <div class="w-16 h-16 flex-shrink-0 bg-slate-200 rounded-lg flex items-center justify-center border border-white/10">
                         <img src="jipmer-logo.png" alt="JIPMER" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white font-bold text-lg mb-1">Doctor of Medicine (DM) - Cardiology</p>
-                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry</p>
+                        <p class="text-slate-700 font-bold text-lg mb-1">Doctor of Medicine (DM) - Cardiology</p>
+                        <p class="text-gray-600 uppercase text-[15px] tracking-wider">Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -131,7 +260,7 @@
                         <img src="kem-logo.jpeg" alt="Seth GS Medical College" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white font-bold text-lg mb-1">Doctor of Medicine (MD) - Internal Medicine</p>
+                        <p class="text-slate-700 font-bold text-lg mb-1">Doctor of Medicine (MD) - Internal Medicine</p>
                         <p class="text-white-600 uppercase text-[15px] tracking-wider">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
                     </div>
                 </div>
@@ -140,23 +269,23 @@
                         <img src="kem-logo.jpeg" alt="Seth GS Medical College" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white font-bold text-lg mb-1">Bachelor of Medicine and Bachelor of Surgery (MBBS)</p>
-                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
+                        <p class="text-slate-700 font-bold text-lg mb-1">Bachelor of Medicine and Bachelor of Surgery (MBBS)</p>
+                        <p class="text-gray-600 uppercase text-[15px] tracking-wider">Seth G.S. Medical College & KEM Hospital, Mumbai</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="work-experience" class="animate-fade-in-up delay-300">
-            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Work Experience</h2>
-            <div class="space-y-8">
+            <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-10" style="color: #3f51b5;">Work Experience</h2>
+            <div class="space-y-8">The 
                 <div class="flex gap-4 items-start">
                     <div class="w-16 h-16 flex-shrink-0 bg-slate-200 rounded-lg flex items-center justify-center border border-white/10">
                         <img src="aiims-logo.svg" alt="AIIMS New Delhi" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white font-bold text-lg mb-1">Assistant Professor, Department of Cardiology</p>
-                        <p class="text-white-600 uppercase text-[15px] tracking-wider">All India Institute of Medical Sciences (AIIMS), New Delhi</p>
+                        <p class="text-slate-700 font-bold text-lg mb-1">Assistant Professor, Department of Cardiology</p>
+                        <p class="text-gray-600 uppercase text-[15px] tracking-wider">All India Institute of Medical Sciences (AIIMS), New Delhi</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -164,8 +293,8 @@
                         <img src="aarhus-logo.svg" alt="Aarhus University Hospital" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white font-bold text-lg mb-1">Post-doctoral fellowship in Valvular Interventions</p>
-                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Aarhus University Hospital, Denmark</p>
+                        <p class="text-slate-700 font-bold text-lg mb-1">Post-doctoral fellowship in Valvular Interventions</p>
+                        <p class="text-gray-600 uppercase text-[15px] tracking-wider">Aarhus University Hospital, Denmark</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -173,15 +302,15 @@
                         <img src="dmh-logo.jpeg" alt="Deenanath Mangeshkar Hospital" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white font-bold text-lg mb-1">Post-doctoral fellowship in Cardiac Electrophysiology</p>
-                        <p class="text-white-600 uppercase text-[15px] tracking-wider">Deenanath Mangeshkar Hospital, Pune</p>
+                        <p class="text-slate-700 font-bold text-lg mb-1">Post-doctoral fellowship in Cardiac Electrophysiology</p>
+                        <p class="text-gray-600 uppercase text-[15px] tracking-wider">Deenanath Mangeshkar Hospital, Pune</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="affiliations" class="animate-fade-in-up delay-400">
-            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Current Affiliations</h2>
+            <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-10" style="color: #3f51b5;">Current Affiliations</h2>
             <div class="space-y-8">
                 
                 <div class="flex gap-4 items-start">
@@ -189,7 +318,7 @@
                         <img src="ashwini-logo.jpeg" alt="Ashwini Cooperative Hospital" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">Ashwini Cooperative Hospital, Solapur</p>
+                        <p class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Ashwini Cooperative Hospital, Solapur</p>
                     </div>
                 </div>
                 <div class="flex gap-4 items-start">
@@ -197,7 +326,7 @@
                         <img src="spandan-logo.webp" alt="Spandan Cardiac Diagnostic and Research Center" class="w-12 h-12 object-contain">
                     </div>
                     <div>
-                        <p class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">Spandan Cardiac Diagnostic and Research Center, Solapur</p>
+                        <p class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Spandan Cardiac Diagnostic and Research Center, Solapur</p>
                     </div>
                 </div>
             </div>
@@ -205,120 +334,159 @@
 
         <section id="research" class="animate-fade-in-up delay-500">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
-                <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold">Selected Publications</h2>
-                <a href="https://scholar.google.com/citations?user=ELePHUsAAAAJ&hl=en" class="text-s uppercase tracking-widest text-blue-400 hover:text-blue-800 border-b border-white/10 pb-1 transition">
+                <h2 class="text-s uppercase tracking-[0.3em] font-bold" style="color: #3f51b5;">Selected Publications</h2>
+                <a href="https://scholar.google.com/citations?user=ELePHUsAAAAJ&hl=en" class="text-s uppercase tracking-widest border-b border-slate-300 pb-1 transition" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">
                     Full List on Google Scholar →
                 </a>
             </div>
             
             <div class="space-y-8">
                 <div class="group">
-                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Indian Pacing and Electrophysiology Journal</p>
-                    <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
+                    <p class="text-gray-600 text-xs uppercase tracking-widest mb-2 font-mono">Indian Pacing and Electrophysiology Journal</p>
+                    <h3 class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">
                         Left Bundle Cardiac Resynchronization Therapy versus Left Bundle Optimized Cardiac Resynchronization Therapy
                     </h3>
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0972629226000513" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0972629226000513" target="_blank" class="text-[10px] uppercase tracking-widest transition underline underline-offset-4" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Journal of Practice of Cardiovascular Sciences</p>
-                    <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
+                    <p class="text-gray-600 text-xs uppercase tracking-widest mb-2 font-mono">Journal of Practice of Cardiovascular Sciences</p>
+                    <h3 class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">
                         Harnessing Machine Learning for Predicting Atrial Fibrillation from Electrocardiogram Signals
                     </h3>
-                    <a href="https://journals.lww.com/jpcs/fulltext/2025/09000/harnessing_machine_learning_for_predicting_atrial.5.aspx?context=latestarticles" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://journals.lww.com/jpcs/fulltext/2025/09000/harnessing_machine_learning_for_predicting_atrial.5.aspx?context=latestarticles" target="_blank" class="text-[10px] uppercase tracking-widest transition underline underline-offset-4" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Pacing and Clinical ELectrophysiology (PACE)</p>
-                    <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
+                    <p class="text-gray-600 text-xs uppercase tracking-widest mb-2 font-mono">Pacing and Clinical ELectrophysiology (PACE)</p>
+                    <h3 class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">
                         Comparison of electrocardiographic parameters between left bundle optimized cardiac resynchronization therapy (LOT-CRT) and left bundle branch pacing—cardiac resynchronization therapy (LBBP-CRT)
                     </h3>
-                    <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/pace.14793" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/pace.14793" target="_blank" class="text-[10px] uppercase tracking-widest transition underline underline-offset-4" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">Indian Journal of Pediatrics</p>
-                    <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
+                    <p class="text-gray-600 text-xs uppercase tracking-widest mb-2 font-mono">Indian Journal of Pediatrics</p>
+                    <h3 class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">
                         Audio vs. Video as a Pacifier for Pediatric Echocardiography- A Randomized Controlled Trial
                     </h3>
-                    <a href="https://link.springer.com/article/10.1007/s12098-023-04516-w" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://link.springer.com/article/10.1007/s12098-023-04516-w" target="_blank" class="text-[10px] uppercase tracking-widest transition underline underline-offset-4" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">Read Article</a>
                 </div>
 
                 <div class="group">
-                    <p class="text-gray-300 text-xs uppercase tracking-widest mb-2 font-mono">European Heart Journal</p>
-                    <h3 class="text-white text-xl font-medium group-hover:text-blue-400 transition leading-snug mb-3">
+                    <p class="text-gray-600 text-xs uppercase tracking-widest mb-2 font-mono">European Heart Journal</p>
+                    <h3 class="text-slate-700 text-xl font-medium transition leading-snug mb-3" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">
                         Isolated posterior mitral leaflet elongation-related dynamic left ventricular outflow obstruction
                     </h3>
-                    <a href="https://academic.oup.com/eurheartj/article/43/28/2713/6604050?login=false" target="_blank" class="text-[10px] uppercase tracking-widest text-blue-400 hover:text-blue-800 transition underline underline-offset-4">Read Article</a>
+                    <a href="https://academic.oup.com/eurheartj/article/43/28/2713/6604050?login=false" target="_blank" class="text-[10px] uppercase tracking-widest transition underline underline-offset-4" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">Read Article</a>
                 </div>
             </div>
         </section>
 
         <section id="awards" class="animate-fade-in-up delay-100">
-            <h2 class="text-s uppercase tracking-[0.3em] text-blue-500 font-bold mb-10">Key Awards & Accomplishments</h2>
+            <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-10" style="color: #3f51b5;">Key Awards & Accomplishments</h2>
             <div class="space-y-6">
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #3f51b5;"></div>
                     <div>
-                        <p class="text-white font-medium text-lg mb-1">AV Gandhi SCAI 'Excellence in Cardiology' Award</p>
-                        <p class="text-blue-400 text-sm">Society of Cardiovascular Angiography and Interventions, 2024</p>
+                        <p class="text-slate-700 font-medium text-lg mb-1">AV Gandhi SCAI 'Excellence in Cardiology' Award</p>
+                        <p class="text-sm" style="color: #3f51b5;">Society of Cardiovascular Angiography and Interventions, 2024</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #3f51b5;"></div>
                     <div>
-                        <p class="text-white font-medium text-lg mb-1">Torrent Young Scholar and Best Orator Award</p>
-                        <p class="text-blue-400 text-sm">Torrent Pharmaceuticals, 2023</p>
+                        <p class="text-slate-700 font-medium text-lg mb-1">Torrent Young Scholar and Best Orator Award</p>
+                        <p class="text-sm" style="color: #3f51b5;">Torrent Pharmaceuticals, 2023</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #3f51b5;"></div>
                     <div>
-                        <p class="text-white font-medium text-lg mb-1">Indian Heart Journal Best Research Paper Award</p>
-                        <p class="text-blue-400 text-sm">Cardiology Society of India, 2023</p>
+                        <p class="text-slate-700 font-medium text-lg mb-1">Indian Heart Journal Best Research Paper Award</p>
+                        <p class="text-sm" style="color: #3f51b5;">Cardiology Society of India, 2023</p>
                     </div>
                 </div>
                  <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #3f51b5;"></div>
                     <div>
-                        <p class="text-white font-medium text-lg mb-1">Malekar Prize and Habbu Gold Medal in Internal Medicine</p>
-                        <p class="text-blue-400 text-sm">Seth GSMC and KEMH, 2023</p>
+                        <p class="text-slate-700 font-medium text-lg mb-1">Malekar Prize and Habbu Gold Medal in Internal Medicine</p>
+                        <p class="text-sm" style="color: #3f51b5;">Seth GSMC and KEMH, 2023</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-4">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <div class="w-2 h-2 rounded-full mt-2 flex-shrink-0" style="background-color: #3f51b5;"></div>
                     <div>
-                        <p class="text-white font-medium text-lg mb-1">Academic Excellence Award</p>
-                        <p class="text-blue-400 text-sm">Maharashtra Association of Physicians, 2018</p>
+                        <p class="text-slate-700 font-medium text-lg mb-1">Academic Excellence Award</p>
+                        <p class="text-sm" style="color: #3f51b5;">Maharashtra Association of Physicians, 2018</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="text-center pt-24 border-t border-white/10 animate-fade-in-up delay-200">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tighter">Let's connect.</h2>
+        <section id="contact" class="text-center pt-24 border-t border-slate-200 animate-fade-in-up delay-200">
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-700 mb-6 tracking-tighter">Let's connect.</h2>
             <p class="text-gray-600 mb-10 max-w-lg mx-auto leading-relaxed">
                 Open for clinical consultations and research collaborations
             </p>
-            <div class="flex gap-6 justify-center mt-8">
-                <a href="https://www.linkedin.com/in/chinmay-parale-61b1541b9" target="_blank" class="text-blue-400 hover:text-blue-800 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="mailto:chinmayparale@gmail.com" class="text-blue-400 hover:text-blue-800 transition">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </a>
-                <a href="https://twitter.com/chinmayparale" target="_blank" class="text-blue-400 hover:text-blue-800 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/chinmayparale" target="_blank" class="text-blue-400 hover:text-blue-800 transition">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
+            
+            <!-- Contact Form -->
+            <div class="max-w-2xl mx-auto mb-16 glass-card p-8 rounded-lg">
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="text-left">
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Your Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition" placeholder="Dr. Your Name">
+                        </div>
+                        <div class="text-left">
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="text-left">
+                        <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">Subject *</label>
+                        <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition" placeholder="Inquiry about...">
+                    </div>
+                    
+                    <div class="text-left">
+                        <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message *</label>
+                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition resize-none" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full px-6 py-3 font-medium text-white rounded-lg transition" style="background-color: #3f51b5;" onmouseover="this.style.backgroundColor='#303f9f'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#3f51b5'; this.style.transform='translateY(0)'">
+                        Send Message
+                    </button>
+                    
+                    <p class="text-xs text-gray-500 mt-4">
+                        Your message will be encrypted and sent securely. I'll respond within 24-48 hours.
+                    </p>
+                </form>
+            </div>
+            
+            <!-- Social Links -->
+            <div>
+                <p class="text-slate-700 font-medium mb-6">Or connect via social media:</p>
+                <div class="flex gap-6 justify-center">
+                    <a href="https://www.linkedin.com/in/chinmay-parale-61b1541b9" target="_blank" class="transition" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="mailto:chinmayparale@gmail.com" class="transition" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/chinmayparale" target="_blank" class="transition" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/chinmayparale" target="_blank" class="transition" style="color: #3f51b5;" onmouseover="this.style.color='#303f9f'" onmouseout="this.style.color='#3f51b5'">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="text-center py-12 text-[10px] uppercase tracking-[0.4em] text-blue-400 border-t border-white/10">
+    <footer class="text-center py-12 text-[10px] uppercase tracking-[0.4em] border-t border-slate-200" style="color: #3f51b5;">
         © 2026 DR. CHINMAY PARALE • PUNE, MAHARASHTRA, INDIA
     </footer>
 
@@ -329,6 +497,7 @@
         
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('open');
+            mobileMenuButton.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
         });
         
         // Close mobile menu when clicking a link
@@ -336,8 +505,57 @@
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
             });
         });
+        
+        // Title click smooth scroll to top
+        const navTitle = document.querySelector('.nav-title');
+        navTitle.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth navigation link clicks with animations
+        const navLinks = document.querySelectorAll('.nav-link-smooth');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('target') !== '_blank') {
+                    e.preventDefault();
+                    
+                    // Add pulse animation
+                    link.style.animation = 'none';
+                    setTimeout(() => {
+                        link.style.animation = 'clickPulse 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    }, 10);
+                    
+                    // Get target section
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        // Smooth scroll with offset for navbar
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const targetPosition = targetSection.offsetTop - navHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Add highlight effect to target section
+                        setTimeout(() => {
+                            targetSection.style.transition = 'background-color 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                            targetSection.style.backgroundColor = 'rgba(63, 81, 181, 0.05)';
+                            setTimeout(() => {
+                                targetSection.style.backgroundColor = 'transparent';
+                            }, 600);
+                        }, 300);
+                    }
+                }
+            });
+        });
+        
         
         // Subtle scroll animations
         const observerOptions = {
@@ -357,6 +575,88 @@
         document.querySelectorAll('.animate-fade-in-up').forEach(section => {
             observer.observe(section);
         });
+        
+        // Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            submitButton.style.opacity = '0.7';
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            
+            // Submit to Formspree (you need to update YOUR_FORM_ID)
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    const successMsg = document.createElement('div');
+                    successMsg.className = 'form-success mb-4';
+                    successMsg.textContent = '✓ Message sent successfully! I\'ll get back to you within 24-48 hours.';
+                    contactForm.insertBefore(successMsg, contactForm.firstChild);
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successMsg.style.animation = 'fadeOut 400ms ease-out forwards';
+                        setTimeout(() => successMsg.remove(), 400);
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                // Show error message
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'form-error mb-4';
+                errorMsg.textContent = '✕ Error sending message. Please try again or email directly to chinmayparale@gmail.com';
+                contactForm.insertBefore(errorMsg, contactForm.firstChild);
+                
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    errorMsg.style.animation = 'fadeOut 400ms ease-out forwards';
+                    setTimeout(() => errorMsg.remove(), 400);
+                }, 5000);
+            })
+            .finally(() => {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+                submitButton.style.opacity = '1';
+            });
+        });
+        
+        // Add fade out animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 
 </body>
