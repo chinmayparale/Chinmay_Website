@@ -1,0 +1,11 @@
+import base64
+
+# Base64 encoded 32x32 PNG with medical icon
+png_data = base64.b64decode(
+    'iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADRklEQVRYhe2WTWtaQRCGJyIYLUSrVaG9eI1aL734B+wpF8/ePOqFy4nVcPEgqb14E6SHejwULy0iKBRpbxZtbBKj1S9s2Hme3Zm3OzsD87Jw9u3M7Oz3TNe0G25I4LUgxJoQa0KsCfFfCABgeXk5WF5eBlhYWBiOjY0B7OwsYHJ1JcAKIgTIwY7A8vIyMBgM+Pv7u//39xeGQyEA5ucXgWg0yq9fvzgcDvkfGE8QO4kxkR0/3GNlZYX/kd6WZZnE43GJ47i0tLT0S7IsS7OzswSgaRp0XV+hVCr1VqvVWslkkmKx2HO9Xpd4PM4sy+L//w9Kki0Yhi0wOzsr8XhcQqGQ1Go1qdVqUi6XpVgsSjgclkgkQrIsSywWk/X1dS+Hx+PhhWKxCEtLSwBXmj/0ycSYSI/HPX79+qWOjIwgGo1iMBh8Uebm5qDr+gFbWxux/x79fr+0tbWFWq32QyZJ0oGKYwKxpKSkVCoVlpYWLLq6ukJvb6+KoihQVRXJZPKAS0+3242trS2p1Wo/ZOLxuABX4zrUarXsJsqMVBpFURAKhSCEAE3TEAgEoOu6joyMlbW1tYPF8Q0WFxdxdXV1QLTB7u4ufD4fzs7OsLMzf8B1P27EvHJY0TTNeNIZrI4wYLNGo5GyLIvGxkYFuHqYPp+P7t27h2AwiKOjI1xfX6Oz8/LJcXV1dYCt2/VaXV0Fn8+npqYmBXBlCjU2NqKvr08x+nimport base64
+
+# Minimal 32x32 PNG with heart/ECG icon (base64 encoded)
+with open('favicon.png', 'wb') as f:
+    f.write(png_data)
+
+print('Favicon created successfully!')

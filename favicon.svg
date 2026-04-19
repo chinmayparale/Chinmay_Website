@@ -1,0 +1,22 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="256" height="256" fill="transparent"/>
+  
+  <!-- Heart shape -->
+  <path d="M 128 210 C 60 160, 20 120, 20 85 C 20 60, 40 45, 60 45 C 75 45, 90 55, 128 85 C 166 55, 181 45, 196 45 C 216 45, 236 60, 236 85 C 236 120, 196 160, 128 210 Z" fill="#344d5e" stroke="none"/>
+  
+  <!-- ECG line -->
+  <g stroke="#dc3545" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Baseline left -->
+    <line x1="20" y1="128" x2="100" y2="128"/>
+    
+    <!-- First spike (upward) -->
+    <polyline points="100,128 110,128 115,85 120,165 125,128 135,128"/>
+    
+    <!-- Small waves -->
+    <polyline points="135,128 145,128 148,110 151,146 154,128 165,128"/>
+    
+    <!-- Baseline right -->
+    <line x1="165" y1="128" x2="236" y2="128"/>
+  </g>
+</svg>
