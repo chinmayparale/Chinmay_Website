@@ -9,6 +9,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&family=DM+Sans:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Contact Form Fix */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2c5282; /* match your site's accent color */
+  box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+#submit-btn {
+  padding: 0.85rem 2rem;
+  background-color: #2c5282;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+#submit-btn:hover {
+  background-color: #1a365d;
+}
+
+#submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#form-status {
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+}
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #ffffff; color: #334155; scroll-behavior: smooth; }
         h1 { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
         h2 { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
@@ -167,6 +240,27 @@
             color: #3f51b5;
         }
     </style>
+ <!-- Primary Meta Tags -->
+<meta name="description" content="Dr. Chinmay Parale – Interventional Cardiologist & Electrophysiologist in Pune, India. Specializing in EP ablations, TAVI, MitraClip, and pacemaker implantations.">
+<meta name="keywords" content="Chinmay Parale, Cardiologist Pune, Electrophysiologist India, TAVI, MitraClip, Pacemaker, Cardiac Ablation, AIIMS Cardiology, Interventional Cardiology">
+<meta name="author" content="Dr. Chinmay Parale">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (for WhatsApp, LinkedIn, Facebook previews) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chinmayparale.github.io/Chinmay_Website/">
+<meta property="og:title" content="Dr. Chinmay Parale | Interventional Cardiologist & Electrophysiologist">
+<meta property="og:description" content="Interventional Cardiologist & Electrophysiologist based in Pune, India. Faculty at AIIMS New Delhi. Specializing in EP ablations, TAVI, and pacemaker implantations.">
+<meta property="og:image" content="https://chinmayparale.github.io/Chinmay_Website/profile.jpg">
+
+<!-- Twitter Card (for Twitter/X previews) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dr. Chinmay Parale | Interventional Cardiologist & Electrophysiologist">
+<meta name="twitter:description" content="Interventional Cardiologist & Electrophysiologist based in Pune, India. Specializing in EP ablations, TAVI, and pacemaker implantations.">
+<meta name="twitter:image" content="https://chinmayparale.github.io/Chinmay_Website/profile.jpg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://chinmayparale.github.io/Chinmay_Website/">   
 </head>
 <body class="text-slate-700 antialiased">
 
@@ -278,7 +372,7 @@
 
         <section id="work-experience" class="animate-fade-in-up delay-300">
             <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-10" style="color: #3f51b5;">Work Experience</h2>
-            <div class="space-y-8">The 
+            <div class="space-y-8">
                 <div class="flex gap-4 items-start">
                     <div class="w-16 h-16 flex-shrink-0 bg-slate-200 rounded-lg flex items-center justify-center border border-white/10">
                         <img src="aiims-logo.svg" alt="AIIMS New Delhi" class="w-12 h-12 object-contain">
@@ -430,38 +524,39 @@
                 Open for clinical consultations and research collaborations
             </p>
             
-            <!-- Contact Form -->
+ <!-- Contact Form -->
             <div class="max-w-2xl mx-auto mb-16 glass-card p-8 rounded-lg">
-                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="text-left">
-                            <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Your Name *</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition" placeholder="Dr. Your Name">
-                        </div>
-                        <div class="text-left">
-                            <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email Address *</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition" placeholder="your@email.com">
-                        </div>
-                    </div>
-                    
-                    <div class="text-left">
-                        <label for="subject" class="block text-sm font-medium text-slate-700 mb-2">Subject *</label>
-                        <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition" placeholder="Inquiry about...">
-                    </div>
-                    
-                    <div class="text-left">
-                        <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message *</label>
-                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-400 transition resize-none" placeholder="Your message..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="w-full px-6 py-3 font-medium text-white rounded-lg transition" style="background-color: #3f51b5;" onmouseover="this.style.backgroundColor='#303f9f'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#3f51b5'; this.style.transform='translateY(0)'">
-                        Send Message
-                    </button>
-                    
-                    <p class="text-xs text-gray-500 mt-4">
-                        Your message will be encrypted and sent securely. I'll respond within 24-48 hours.
-                    </p>
-                </form>
+               <form action="https://formspree.io/f/xbdqnvdk" method="POST" id="contact-form">
+  
+  <div class="form-group">
+    <label for="name">Your Name *</label>
+    <input type="text" id="name" name="name" required placeholder="Dr. Jane Smith">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required placeholder="jane@example.com">
+  </div>
+
+  <div class="form-group">
+    <label for="subject">Subject *</label>
+    <input type="text" id="subject" name="subject" required placeholder="Research Collaboration / Patient Consultation">
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+  </div>
+
+  <!-- Spam protection - hidden from users -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <button type="submit" id="submit-btn">Send Message</button>
+
+  <!-- Success / Error feedback -->
+  <p id="form-status" style="display:none; margin-top: 1rem;"></p>
+
+</form>
             </div>
             
             <!-- Social Links -->
@@ -658,6 +753,43 @@
         `;
         document.head.appendChild(style);
     </script>
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  const submitBtn = document.getElementById("submit-btn");
 
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Message sent! I'll get back to you within 24–48 hours.";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        status.textContent = "❌ Something went wrong. Please try emailing directly.";
+        status.style.color = "red";
+      }
+    } catch (error) {
+      status.textContent = "❌ Network error. Please check your connection and try again.";
+      status.style.color = "red";
+    }
+
+    status.style.display = "block";
+    submitBtn.textContent = "Send Message";
+    submitBtn.disabled = false;
+  });
+</script>
 </body>
 </html>
