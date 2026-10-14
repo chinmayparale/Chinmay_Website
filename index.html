@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DR. CHINMAY PARALE | Interventional Cardiologist & Electrophysiologist</title>
+    <title>Dr. Chinmay Parale | Electrophysiologist &amp; Interventional Cardiologist, Solapur &amp; Pune</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&family=DM+Sans:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -88,7 +88,6 @@ h1 { font-family: ‘Manrope’, sans-serif; font-weight: 700; letter-spacing: -
 h2 { font-family: ‘Manrope’, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
 .subtitle { font-family: ‘Manrope’, sans-serif; font-weight: 600; letter-spacing: 0.03em; }
 
-```
     .glass-card { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(63, 81, 181, 0.15); transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     .glass-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(63, 81, 181, 0.1); }
     .text-gradient { background: linear-gradient(to right, #3f51b5, #5c6bc0); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -242,7 +241,6 @@ h2 { font-family: ‘Manrope’, sans-serif; font-weight: 700; letter-spacing: -
         color: #3f51b5;
     }
     /* Hero balance fix */
-```
 
 .hero {
 display: flex;
@@ -285,53 +283,139 @@ font-size: clamp(2.5rem, 5vw, 4rem);
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dr. Chinmay Parale | Interventional Cardiologist & Electrophysiologist">
-<meta name="twitter:description" content="Interventional Cardiologist & Electrophysiologist based in Pune, India. Specializing in EP ablations, TAVI, and pacemaker implantations.">
+<meta name="twitter:description" content="Interventional Cardiologist & Electrophysiologist based in Solapur and Pune, India. Specializing in conduction system pacing, CRT, ICD, TAVI, and MitraClip.">
 <meta name="twitter:image" content="https://chinmayparale.github.io/Chinmay_Website/profile.jpg">
 
 <!-- Canonical URL -->
 
 <link rel="canonical" href="https://chinmayparale.github.io/Chinmay_Website/">   
-<!-- JSON-LD Schema Markup for AI Search (GEO) & Google Rich Snippets -->
+<!-- Structured data (JSON-LD): tells Google and AI search tools who you are, what you treat and where -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Dr. Chinmay Parale",
-  "jobTitle": "Interventional Cardiologist & Electrophysiologist",
-  "medicalSpecialty": [
-    "https://en.wikipedia.org/wiki/Cardiology",
-    "https://en.wikipedia.org/wiki/Cardiac_electrophysiology"
-  ],
-  "description": "Interventional Cardiologist & Electrophysiologist based in Solapur and Pune, India. Specializing in conduction system pacing, CRT, ICD, TAVI, and MitraClip.",
-  "image": "https://chinmayparale.github.io/Chinmay_Website/profile.jpg",
-  "url": "https://chinmayparale.github.io/Chinmay_Website/",
-  "sameAs": [
-    "https://scholar.google.com/citations?user=ELePHUsAAAAJ&hl=en"
-  ],
-  "worksFor": {
-    "@type": "MedicalOrganization",
-    "name": "Spandan Cardiac Diagnostic and Research Centre",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Modi Khana, Opp. Ambedkar Bhavan",
-      "addressLocality": "Solapur",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "telephone": "+91-217-231-3979"
-  },
-  "alumniOf": [
+  "@graph": [
     {
-      "@type": "EducationalOrganization",
-      "name": "All India Institute of Medical Sciences (AIIMS), New Delhi"
+      "@type": "WebSite",
+      "@id": "https://chinmayparale.github.io/Chinmay_Website/#website",
+      "url": "https://chinmayparale.github.io/Chinmay_Website/",
+      "name": "Dr. Chinmay Parale – Cardiac Electrophysiologist & Interventional Cardiologist",
+      "inLanguage": "en-IN",
+      "about": { "@id": "https://chinmayparale.github.io/Chinmay_Website/#physician" }
     },
     {
-      "@type": "EducationalOrganization",
-      "name": "JIPMER, Puducherry"
+      "@type": ["Physician", "Person"],
+      "@id": "https://chinmayparale.github.io/Chinmay_Website/#physician",
+      "name": "Dr. Chinmay Parale",
+      "givenName": "Chinmay",
+      "familyName": "Parale",
+      "honorificPrefix": "Dr.",
+      "honorificSuffix": "MD, DM",
+      "jobTitle": "Interventional Cardiologist & Cardiac Electrophysiologist",
+      "description": "Interventional cardiologist and cardiac electrophysiologist in Solapur and Pune, India. Former Assistant Professor of Cardiology at AIIMS New Delhi, with fellowships in valvular interventions (Aarhus University Hospital, Denmark) and cardiac electrophysiology (Deenanath Mangeshkar Hospital, Pune). Performs TAVI, MitraClip, pacemaker and conduction system pacing (LBBAP), CRT and ICD implantation, and EP study and catheter ablation.",
+      "image": "https://chinmayparale.github.io/Chinmay_Website/profile.jpg",
+      "url": "https://chinmayparale.github.io/Chinmay_Website/",
+      "email": "mailto:chinmayparale@gmail.com",
+      "telephone": "+91-217-231-3979",
+      "medicalSpecialty": ["https://schema.org/Cardiovascular"],
+      "knowsAbout": [
+        "Cardiac electrophysiology",
+        "Catheter ablation",
+        "Atrial fibrillation ablation",
+        "Pulmonary vein isolation",
+        "Supraventricular tachycardia ablation",
+        "Ventricular tachycardia ablation",
+        "3D electroanatomic mapping",
+        "Pacemaker implantation",
+        "Conduction system pacing",
+        "Left bundle branch area pacing (LBBAP)",
+        "His bundle pacing",
+        "Cardiac resynchronization therapy (CRT)",
+        "Left bundle optimized CRT (LOT-CRT)",
+        "Implantable cardioverter-defibrillator (ICD)",
+        "CRT-D",
+        "Transcatheter aortic valve implantation (TAVI / TAVR)",
+        "Valve-in-valve TAVI",
+        "MitraClip transcatheter edge-to-edge repair (TEER)",
+        "Structural heart interventions",
+        "Interventional cardiology"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Solapur" },
+        { "@type": "City", "name": "Pune" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Modi Khana, Opp. Ambedkar Bhavan",
+        "addressLocality": "Solapur",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "hospitalAffiliation": [
+        {
+          "@type": "Hospital",
+          "name": "Ashwini Cooperative Hospital",
+          "address": { "@type": "PostalAddress", "addressLocality": "Solapur", "addressRegion": "Maharashtra", "addressCountry": "IN" }
+        },
+        {
+          "@type": "MedicalClinic",
+          "name": "Spandan Cardiac Diagnostic and Research Centre",
+          "telephone": "+91-217-231-3979",
+          "address": { "@type": "PostalAddress", "streetAddress": "Modi Khana, Opp. Ambedkar Bhavan", "addressLocality": "Solapur", "addressRegion": "Maharashtra", "addressCountry": "IN" }
+        }
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry" },
+        { "@type": "CollegeOrUniversity", "name": "Seth G.S. Medical College & KEM Hospital, Mumbai" },
+        { "@type": "Hospital", "name": "All India Institute of Medical Sciences (AIIMS), New Delhi" },
+        { "@type": "Hospital", "name": "Aarhus University Hospital, Denmark" },
+        { "@type": "Hospital", "name": "Deenanath Mangeshkar Hospital, Pune" }
+      ],
+      "award": [
+        "AV Gandhi SCAI 'Excellence in Cardiology' Award (2024)",
+        "Torrent Young Scholar and Best Orator Award (2023)",
+        "Indian Heart Journal Best Research Paper Award, Cardiology Society of India (2023)",
+        "Malekar Prize and Habbu Gold Medal in Internal Medicine (2023)",
+        "Academic Excellence Award, Maharashtra Association of Physicians (2018)"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/chinmay-parale-61b1541b9",
+        "https://scholar.google.com/citations?user=ELePHUsAAAAJ&hl=en",
+        "https://twitter.com/chinmayparale",
+        "https://www.facebook.com/chinmayparale"
+      ],
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Transcatheter Aortic Valve Implantation (TAVI)", "url": "https://chinmayparale.github.io/Chinmay_Website/tavi-solapur-pune.html" },
+        { "@type": "MedicalProcedure", "name": "MitraClip Transcatheter Mitral Valve Repair", "url": "https://chinmayparale.github.io/Chinmay_Website/mitraclip-mitral-valve-repair.html" },
+        { "@type": "MedicalProcedure", "name": "Pacemaker Implantation and Conduction System Pacing (LBBAP)", "url": "https://chinmayparale.github.io/Chinmay_Website/pacemaker-conduction-system-pacing.html" },
+        { "@type": "MedicalProcedure", "name": "CRT and ICD Implantation", "url": "https://chinmayparale.github.io/Chinmay_Website/crt-icd-implantation.html" },
+        { "@type": "MedicalProcedure", "name": "EP Study and Catheter Ablation", "url": "https://chinmayparale.github.io/Chinmay_Website/ep-study-catheter-ablation.html" }
+      ]
     },
     {
-      "@type": "EducationalOrganization",
-      "name": "Seth G.S. Medical College & KEM Hospital, Mumbai"
+      "@type": "FAQPage",
+      "@id": "https://chinmayparale.github.io/Chinmay_Website/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Conduction System Pacing (CSP) and who benefits from it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Conduction System Pacing (including His-bundle and Left Bundle Branch Pacing) is an advanced technique that directly stimulates the heart's native electrical wiring. Unlike traditional pacing which can cause asynchronous ventricular contraction, CSP maintains natural, synchronized heartbeats. Patients requiring pacemakers for slow heart rates or those experiencing pacing-induced cardiomyopathy benefit from this physiological approach." }
+        },
+        {
+          "@type": "Question",
+          "name": "When is an ICD or CRT (Cardiac Resynchronization Therapy) indicated?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An Implantable Cardioverter Defibrillator (ICD) is indicated for patients at high risk of life-threatening ventricular arrhythmias or sudden cardiac arrest. CRT is recommended for heart failure patients with reduced ejection fraction and electrical dyssynchrony (such as Left Bundle Branch Block). Dr. Chinmay Parale performs both left bundle optimized CRT (LOT-CRT) and traditional biventricular pacing." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are TAVI and MitraClip minimally invasive procedures?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Transcatheter Aortic Valve Implantation (TAVI) replaces a narrowed aortic valve without open-heart surgery, using a catheter usually inserted through an artery in the groin. MitraClip is a percutaneous device used to repair a leaky mitral valve (mitral regurgitation) in patients at high surgical risk. Dr. Parale trained in these structural heart interventions at Aarhus University Hospital, Denmark." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does Dr. Chinmay Parale consult patients in Solapur and Pune?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Dr. Chinmay Parale consults at Spandan Cardiac Diagnostic and Research Centre (Modi Khana, Solapur) and Ashwini Cooperative Hospital in Solapur, with visiting appointments in Pune, Maharashtra. Appointments can be scheduled via the contact form on this website or by phone at +91 217 231 3979." }
+        }
+      ]
     }
   ]
 }
@@ -339,14 +423,14 @@ font-size: clamp(2.5rem, 5vw, 4rem);
 </head>
 <body class="text-slate-700 antialiased">
 
-```
 <nav class="border-b border-slate-200 sticky top-0 z-50 bg-white/80 backdrop-blur-md">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="nav-title text-slate-700 font-semibold tracking-tight uppercase text-sm cursor-pointer">Dr. Chinmay Parale</a>
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="nav-title text-slate-700 font-semibold tracking-tight uppercase text-sm cursor-pointer whitespace-nowrap mr-6">Dr. Chinmay Parale</a>
         
         <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium" style="color: #3f51b5;">
+        <div class="hidden lg:flex space-x-5 text-xs uppercase tracking-wider font-medium" style="color: #3f51b5;">
             <a href="#about" class="nav-link-smooth" style="color: #3f51b5;">About</a>
+            <a href="#treatments" class="nav-link-smooth" style="color: #3f51b5;">Treatments</a>
             <a href="#education" class="nav-link-smooth" style="color: #3f51b5;">Education</a>
             <a href="#work-experience" class="nav-link-smooth" style="color: #3f51b5;">Experience</a>
             <a href="#affiliations" class="nav-link-smooth" style="color: #3f51b5;">Affiliations</a>
@@ -358,7 +442,7 @@ font-size: clamp(2.5rem, 5vw, 4rem);
         </div>
         
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="md:hidden" style="color: #3f51b5;" aria-expanded="false" aria-label="Toggle menu">
+        <button id="mobile-menu-button" class="lg:hidden" style="color: #3f51b5;" aria-expanded="false" aria-label="Toggle menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -366,9 +450,10 @@ font-size: clamp(2.5rem, 5vw, 4rem);
     </div>
     
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-slate-200">
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-slate-200">
         <div class="px-6 py-4 space-y-4">
             <a href="#about" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">About</a>
+            <a href="#treatments" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Treatments</a>
             <a href="#education" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Education</a>
             <a href="#work-experience" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Experience</a>
             <a href="#affiliations" class="block text-slate-700 text-sm uppercase tracking-widest font-medium" style="color: #334155;" onmouseover="this.style.color='#3f51b5'" onmouseout="this.style.color='#334155'">Affiliations</a>
@@ -381,14 +466,22 @@ font-size: clamp(2.5rem, 5vw, 4rem);
     </div>
 </nav>
 
-<header id="about" class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12 animate-fade-in-up">
+<header id="top" class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12 animate-fade-in-up">
     <div class="flex-1 order-2 md:order-1">
         <h1 class="text-4xl md:text-6xl font-bold text-slate-700 tracking-normal mb-4 text-gradient">
             DR. CHINMAY PARALE 
             <span class="text-3xl block mt-2 font-light" style="color: #3f51b5;">MD, DM</span>
         </h1>
         <p class="text-2xl font-bold max-w-xl leading-relaxed mb-8" style="color: #3f51b5;">
-            Interventional Cardiologist & Electrophysiologist 
+            Interventional Cardiologist & Electrophysiologist
+        </p>
+        <p class="text-slate-600 text-base max-w-xl leading-relaxed">
+            Cardiac electrophysiologist and structural heart specialist in <strong class="text-slate-700">Solapur and Pune</strong> — performing
+            <a href="tavi-solapur-pune.html" class="underline underline-offset-4 decoration-indigo-300 hover:text-indigo-700">TAVI</a>,
+            <a href="mitraclip-mitral-valve-repair.html" class="underline underline-offset-4 decoration-indigo-300 hover:text-indigo-700">MitraClip</a>,
+            <a href="pacemaker-conduction-system-pacing.html" class="underline underline-offset-4 decoration-indigo-300 hover:text-indigo-700">pacemaker &amp; conduction system pacing</a>,
+            <a href="crt-icd-implantation.html" class="underline underline-offset-4 decoration-indigo-300 hover:text-indigo-700">CRT-D &amp; ICD implantation</a> and
+            <a href="ep-study-catheter-ablation.html" class="underline underline-offset-4 decoration-indigo-300 hover:text-indigo-700">EP study &amp; catheter ablation</a>.
         </p>
         <a href="#contact" class="btn-primary" style="
         display: inline-block;
@@ -404,10 +497,7 @@ font-size: clamp(2.5rem, 5vw, 4rem);
     
     <div class="w-48 h-48 md:w-60 md:h-60 flex-shrink-0 order-1 md:order-2">
         <div class="w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-slate-200 group">
-            <img src="profile.jpg" alt="Dr. Chinmay Parale" class="w-full h-full object-cover object-center">
-            <div class="flex items-center justify-center h-full text-white text-xs text-center p-4">
-                Photo Placeholder<br>(Place profile.jpg in folder)
-            </div>
+            <img src="profile.jpg" alt="Dr. Chinmay Parale, cardiac electrophysiologist and interventional cardiologist in Solapur and Pune" width="240" height="240" class="w-full h-full object-cover object-center">
         </div>
     </div>
 </header>
@@ -423,6 +513,38 @@ font-size: clamp(2.5rem, 5vw, 4rem);
         <p class="text-slate-700 text-lg leading-relaxed max-w-3xl">
             Beyond the catheterization lab, I spend time reading novels, playing amateur chess and fiddling with Artificial Intelligence tools to solve clinical and other day to day problems.
         </p>
+    </section>
+
+    <section id="treatments" class="animate-fade-in-up delay-100">
+        <h2 class="text-s uppercase tracking-[0.3em] font-bold mb-4" style="color: #3f51b5;">Treatments &amp; Procedures</h2>
+        <p class="text-slate-600 max-w-3xl mb-10">Heart rhythm and structural heart procedures offered in Solapur and Pune. Each page explains who the procedure is for, how it is done and what recovery looks like.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="tavi-solapur-pune.html" class="glass-card rounded-xl p-6 block">
+                <h3 class="text-lg font-bold mb-2" style="color: #2c3e8c;">TAVI (Transcatheter Aortic Valve Implantation)</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Aortic valve replacement without open-heart surgery for severe aortic stenosis, including valve-in-valve TAVI.</p>
+                <span class="inline-block mt-4 text-xs uppercase tracking-widest" style="color: #3f51b5;">Learn more →</span>
+            </a>
+            <a href="mitraclip-mitral-valve-repair.html" class="glass-card rounded-xl p-6 block">
+                <h3 class="text-lg font-bold mb-2" style="color: #2c3e8c;">MitraClip Mitral Valve Repair</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Keyhole repair of a leaking mitral valve (mitral regurgitation) through a vein in the leg.</p>
+                <span class="inline-block mt-4 text-xs uppercase tracking-widest" style="color: #3f51b5;">Learn more →</span>
+            </a>
+            <a href="pacemaker-conduction-system-pacing.html" class="glass-card rounded-xl p-6 block">
+                <h3 class="text-lg font-bold mb-2" style="color: #2c3e8c;">Pacemaker &amp; Conduction System Pacing</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Physiological pacing with left bundle branch area pacing (LBBAP) and His bundle pacing for slow heart rhythms.</p>
+                <span class="inline-block mt-4 text-xs uppercase tracking-widest" style="color: #3f51b5;">Learn more →</span>
+            </a>
+            <a href="crt-icd-implantation.html" class="glass-card rounded-xl p-6 block">
+                <h3 class="text-lg font-bold mb-2" style="color: #2c3e8c;">CRT-D, CRT &amp; ICD Implantation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Devices for heart failure and protection from sudden cardiac arrest, including LOT-CRT and left bundle CRT.</p>
+                <span class="inline-block mt-4 text-xs uppercase tracking-widest" style="color: #3f51b5;">Learn more →</span>
+            </a>
+            <a href="ep-study-catheter-ablation.html" class="glass-card rounded-xl p-6 block md:col-span-2">
+                <h3 class="text-lg font-bold mb-2" style="color: #2c3e8c;">EP Study &amp; Catheter Ablation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">3D-mapping guided ablation for SVT, WPW syndrome, atrial flutter, atrial fibrillation, ectopic beats (PVCs) and ventricular tachycardia.</p>
+                <span class="inline-block mt-4 text-xs uppercase tracking-widest" style="color: #3f51b5;">Learn more →</span>
+            </a>
+        </div>
     </section>
 
     <section id="education" class="animate-fade-in-up delay-200">
@@ -634,7 +756,7 @@ font-size: clamp(2.5rem, 5vw, 4rem);
             <div class="glass-card p-6 rounded-xl">
                 <h3 class="text-slate-800 font-bold text-lg mb-2" style="color: #2c3e8c;">What are TAVI and MitraClip minimally invasive procedures?</h3>
                 <p class="text-slate-700 leading-relaxed mb-3 font-medium">
-                    <strong style="color: #3f51b5;">Direct Answer:</strong> Transcatheter Aortic Valve Implantation (TAVI) replaces a narrowed aortic valve without open-heart surgery, using a catheter typically inserted through the groin or wrist. MitraClip is a percutaneous device used to repair a leaky mitral valve (mitral regurgitation) in high-risk surgical patients.
+                    <strong style="color: #3f51b5;">Direct Answer:</strong> Transcatheter Aortic Valve Implantation (TAVI) replaces a narrowed aortic valve without open-heart surgery, using a catheter usually inserted through an artery in the groin. MitraClip is a percutaneous device used to repair a leaky mitral valve (mitral regurgitation) in high-risk surgical patients.
                 </p>
                 <p class="text-slate-600 text-sm leading-relaxed">
                     Following specialized fellowship training at Aarhus University Hospital in Denmark, Dr. Parale routinely assesses and performs these cutting-edge transcatheter structural heart interventions.
@@ -655,14 +777,11 @@ font-size: clamp(2.5rem, 5vw, 4rem);
         <p class="text-gray-600 mb-10 max-w-lg mx-auto leading-relaxed">
             Open for clinical consultations and research collaborations
         </p>
-```
 
  <!-- Contact Form -->
 
-```
         <div class="max-w-2xl mx-auto mb-16 glass-card p-8 rounded-lg">
            <form action="https://formspree.io/f/xbdqnvdk" method="POST" id="contact-form">
-```
 
   <div class="form-group">
     <label for="name">Your Name *</label>
@@ -697,7 +816,6 @@ font-size: clamp(2.5rem, 5vw, 4rem);
 </form>
             </div>
 
-```
         <!-- Social Links -->
         <div>
             <p class="text-slate-700 font-medium mb-6">Or connect via social media:</p>
@@ -721,7 +839,7 @@ font-size: clamp(2.5rem, 5vw, 4rem);
 </main>
 
 <footer class="text-center py-12 text-[10px] uppercase tracking-[0.4em] border-t border-slate-200" style="color: #3f51b5;">
-    © 2026 DR. CHINMAY PARALE • PUNE, MAHARASHTRA, INDIA
+    © 2026 DR. CHINMAY PARALE • SOLAPUR &amp; PUNE, MAHARASHTRA, INDIA
 </footer>
 
 <script>
@@ -754,7 +872,7 @@ font-size: clamp(2.5rem, 5vw, 4rem);
     const navLinks = document.querySelectorAll('.nav-link-smooth');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            if (link.getAttribute('target') !== '_blank') {
+            if ((link.getAttribute('href') || '').startsWith('#')) {
                 e.preventDefault();
                 
                 // Add pulse animation
@@ -810,72 +928,6 @@ font-size: clamp(2.5rem, 5vw, 4rem);
         observer.observe(section);
     });
     
-    // Contact Form Handling
-    const contactForm = document.getElementById('contact-form');
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        // Disable button and show loading state
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-        submitButton.style.opacity = '0.7';
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        
-        // Submit to Formspree (you need to update YOUR_FORM_ID)
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                // Show success message
-                const successMsg = document.createElement('div');
-                successMsg.className = 'form-success mb-4';
-                successMsg.textContent = '✓ Message sent successfully! I\'ll get back to you within 24-48 hours.';
-                contactForm.insertBefore(successMsg, contactForm.firstChild);
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Remove success message after 5 seconds
-                setTimeout(() => {
-                    successMsg.style.animation = 'fadeOut 400ms ease-out forwards';
-                    setTimeout(() => successMsg.remove(), 400);
-                }, 5000);
-            } else {
-                throw new Error('Form submission failed');
-            }
-        })
-        .catch(error => {
-            // Show error message
-            const errorMsg = document.createElement('div');
-            errorMsg.className = 'form-error mb-4';
-            errorMsg.textContent = '✕ Error sending message. Please try again or email directly to chinmayparale@gmail.com';
-            contactForm.insertBefore(errorMsg, contactForm.firstChild);
-            
-            // Remove error message after 5 seconds
-            setTimeout(() => {
-                errorMsg.style.animation = 'fadeOut 400ms ease-out forwards';
-                setTimeout(() => errorMsg.remove(), 400);
-            }, 5000);
-        })
-        .finally(() => {
-            // Re-enable button
-            submitButton.disabled = false;
-            submitButton.textContent = originalText;
-            submitButton.style.opacity = '1';
-        });
-    });
-    
     // Add fade out animation
     const style = document.createElement('style');
     style.textContent = `
@@ -892,7 +944,6 @@ font-size: clamp(2.5rem, 5vw, 4rem);
     `;
     document.head.appendChild(style);
 </script>
-```
 
 <script>
   const form = document.getElementById("contact-form");
