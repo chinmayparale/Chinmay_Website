@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://chinmayparale.github.io/Chinmay_Website/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chinmayparale.github.io/Chinmay_Website/pulsed-field-ablation-atrial-fibrillation.html</loc>
+    <lastmod>2026-11-20</lastmod>
+  </url>
+  <url>
+    <loc>https://chinmayparale.github.io/Chinmay_Website/ep-study-catheter-ablation.html</loc>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
     <loc>https://chinmayparale.github.io/Chinmay_Website/tavi-solapur-pune.html</loc>
@@ -21,11 +29,7 @@
     <lastmod>2026-10-14</lastmod>
   </url>
   <url>
-    <loc>https://chinmayparale.github.io/Chinmay_Website/ep-study-catheter-ablation.html</loc>
-    <lastmod>2026-10-14</lastmod>
-  </url>
-  <url>
     <loc>https://chinmayparale.github.io/Chinmay_Website/cases.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-20</lastmod>
   </url>
 </urlset>
